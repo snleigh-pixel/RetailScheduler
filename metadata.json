@@ -1,0 +1,6 @@
+{
+  "name": "ShiftFlow Retail - Manpower Scheduler & Labour Dispatch",
+  "description": "Smart retail manpower scheduler with real-time availability tracking, 3-man-day advance shortage alert system, multi-job portal broadcasting for temporary staff hire, and weekly payroll calculations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
