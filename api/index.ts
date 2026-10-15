@@ -12,9 +12,16 @@ apiRouter.get('/health', healthHandler);
 apiRouter.get('/busarrivals', busArrivalsHandler);
 
 // Nager.Date Public Holidays endpoints
+apiRouter.get('/publicholidays', holidaysHandler);
+apiRouter.get('/PublicHolidays', holidaysHandler);
 apiRouter.get('/holidays', holidaysHandler);
 apiRouter.get('/nagerdate', holidaysHandler);
 apiRouter.get('/v3/PublicHolidays/:year?/:countryCode?', (req, res) => {
+  if (req.params.year) req.query.year = req.params.year;
+  if (req.params.countryCode) req.query.countryCode = req.params.countryCode;
+  return holidaysHandler(req, res);
+});
+apiRouter.get('/PublicHolidays/:year?/:countryCode?', (req, res) => {
   if (req.params.year) req.query.year = req.params.year;
   if (req.params.countryCode) req.query.countryCode = req.params.countryCode;
   return holidaysHandler(req, res);
